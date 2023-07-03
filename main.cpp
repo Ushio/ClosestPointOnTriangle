@@ -22,19 +22,16 @@ inline glm::vec3 closestBarycentricCoordinateOnTriangle(glm::vec3 v0, glm::vec3 
     // bc outside the triangle
     if( U < 0.0f )
     {
-        U = 0.0f;
         V = glm::dot( -d0, e0 );
         W = glm::dot( d2, e0 );
     } 
     else if ( V < 0.0f )
     {
-        V = 0.0f;
         W = glm::dot( -d1, e1 );
         U = glm::dot( d0, e1 );
     }
     else if ( W < 0.0f )
     {
-        W = 0.0f;
         U = glm::dot( -d2, e2 );
         V = glm::dot( d1, e2 );
     }
